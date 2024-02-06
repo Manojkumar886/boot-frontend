@@ -1,12 +1,12 @@
-import { MyfirstClass, Orderlist, Table } from "./Components";
-import { Myfirstfun } from "./Sample";
+import { Arraylist } from "./List";
+import { OperatorTernary } from "./TernaryOpe";
+import { Firsthook } from "./UseState";
+
 
 function App() {
   return (
     <>
-      <Orderlist />
-      <Table />
-      <MyfirstClass />
+      <OperatorTernary />
     </>
   )
 }
