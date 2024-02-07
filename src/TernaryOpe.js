@@ -21,7 +21,10 @@ export let OperatorTernary = () => {
             inputvalue == "yellow" ?
                 setCssstyle({ backgroundColor: 'yellow' }) :
                 inputvalue == "seagreen" ?
-                    setCssstyle({ backgroundColor: 'seagreen' }) :
+                    setCssstyle({
+                        backgroundImage: `url(${'multitom.jpg'})`,
+
+                    }) :
 
                     setCssstyle({ backgroundColor: 'brown' })
 
