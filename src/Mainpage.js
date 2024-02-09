@@ -1,14 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Form } from './MyForm';
-
+import { Listall } from './Tempvalues'
 
 export let Mainpage = () => {
 
     const [createpage, setCreatepage] = useState(false);
 
-    const [tempvalue, setTempvalues] = useState({});
+    const [tempvalues, setTempvalues] = useState([]);
 
+    useEffect(() => {
+        // alert("WELCOME")
+        setTempvalues(Listall);
+    })
 
     return (
         <>
@@ -49,7 +53,20 @@ export let Mainpage = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                        tempvalues.map(
+                                            (element, index) =>
+                                                <>
+                                                    <tr>
+                                                        <td>{element.studentname}</td>
+                                                        <td>{element.studentage}</td>
+                                                        <td>{element.studentplace}</td>
+                                                        <td>{element.studentemail}</td>
+                                                        <td>{element.pinnumber}</td>
+                                                    </tr>
+                                                </>
+                                        )
+                                    }
                                 </tbody>
                             </table>
                         </div>

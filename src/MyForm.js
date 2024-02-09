@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react'
+import { Create } from './Tempvalues'
 export let Form = () => {
     const [studentdetails, setStudentdetails] = useState(
         {
@@ -25,7 +26,8 @@ export let Form = () => {
     }
 
     const register = () => {
-        alert(" Regitered ...! " + JSON.stringify(studentdetails))
+        alert(" Regitered ...! " + JSON.stringify(studentdetails));
+        Create(studentdetails);
     }
 
     return (

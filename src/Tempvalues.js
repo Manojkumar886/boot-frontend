@@ -24,11 +24,11 @@ let studentDetails = [
 
 
 
-let Create = (obj) => {
+export let Create = (obj) => {
     studentDetails.push(obj);
 }
 
 
-let Listall = () => {
+export const Listall = () => {
     return studentDetails;
 }
