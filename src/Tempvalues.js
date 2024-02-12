@@ -32,3 +32,7 @@ export let Create = (obj) => {
 export const Listall = () => {
     return studentDetails;
 }
+
+export const Read = (myindex) => {
+    return studentDetails[myindex];
+}
