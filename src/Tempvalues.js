@@ -36,3 +36,13 @@ export const Listall = () => {
 export const Read = (myindex) => {
     return studentDetails[myindex];
 }
+
+
+export const Remove1 = (index) => {
+    studentDetails = studentDetails.filter(
+        (data, pos) => {
+            return pos !== index;
+        }
+    )
+    return studentDetails;
+}
