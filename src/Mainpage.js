@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react'
 import { Form } from './MyForm';
-import { Listall, Remove1 } from './Tempvalues'
+import { Fetchexact, Listall, Remove1 } from './Tempvalues'
 import { Readpage } from './ReadPage';
 import { Updatepage } from './Updatepage';
 
@@ -16,6 +16,8 @@ export let Mainpage = () => {
     const [position, setPosition] = useState(0)
 
     const [updatepage, setUpdatepage] = useState(false);
+
+    const [obj, setObj] = useState([])
 
     useEffect(() => {
         // alert("WELCOME")
@@ -55,7 +57,7 @@ export let Mainpage = () => {
                         :
                         (updatepage) ?
                             <>
-                                <Updatepage />
+                                <Updatepage who={position} mention={obj} />
                                 <button onClick={() => {
                                     setUpdatepage(false);
                                 }}>
@@ -106,6 +108,8 @@ export let Mainpage = () => {
                                                                     <button
                                                                         onClick={() => {
                                                                             setUpdatepage(true);
+                                                                            setPosition(index);
+                                                                            setObj(Fetchexact(element.studentname))
                                                                         }}>UPDATE</button>
                                                                     <button
                                                                         onClick={

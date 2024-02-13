@@ -1,13 +1,17 @@
 import { useState } from "react";
+import { replace } from "./Tempvalues";
 
-export const Updatepage = () => {
+export const Updatepage = (myindex) => {
+
+    const [pos, setpos] = useState(myindex.who)
+
     const [studentdetails, setStudentdetails] = useState(
         {
-            studentname: "",
-            studentage: 0,
-            studentemail: "",
-            studentplace: "",
-            pinnumber: 0
+            studentname: myindex.mention.studentname,
+            studentage: myindex.mention.studentage,
+            studentemail: myindex.mention.studentemail,
+            studentplace: myindex.mention.studentplace,
+            pinnumber: myindex.mention.pinnumber
         })
 
     let setter = (temp) => {
@@ -25,8 +29,8 @@ export const Updatepage = () => {
     }
 
     const update = () => {
-        alert(" Regitered ...! " + JSON.stringify(studentdetails));
-
+        alert(" Updated ...! " + JSON.stringify(studentdetails));
+        replace(studentdetails, pos)
     }
 
     return (

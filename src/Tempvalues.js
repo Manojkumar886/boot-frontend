@@ -46,3 +46,19 @@ export const Remove1 = (index) => {
     )
     return studentDetails;
 }
+
+export const Fetchexact = (name) => {
+    const temp = studentDetails.filter(
+        (data, index) => {
+            return data.studentname === name;
+        }
+    )
+
+    return temp[0];
+}
+
+
+export const replace = (data, pos) => {
+    studentDetails[pos] = data;
+    // replace
+}
