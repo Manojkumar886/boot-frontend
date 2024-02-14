@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/boot-frontend/static/css/main.241951ba.css",
+    "main.js": "/boot-frontend/static/js/main.86340522.js",
+    "index.html": "/boot-frontend/index.html",
+    "main.241951ba.css.map": "/boot-frontend/static/css/main.241951ba.css.map",
+    "main.86340522.js.map": "/boot-frontend/static/js/main.86340522.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.241951ba.css",
+    "static/js/main.86340522.js"
+  ]
+}
